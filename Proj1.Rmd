@@ -1,0 +1,17 @@
+---
+title: "First Assignment"
+author: "mittens@sk.com"
+date: "Oct. 23rd 2017"
+output: html_document
+---
+
+## This is the R Markdown document using leaflet
+
+It shows the place I lived during my postdoc.
+
+```{r echo=T, cache=T}
+library(leaflet)
+
+HereWasI<-c("My old apartment, miss it")
+leaflet() %>% addTiles() %>% addMarkers(lat=34.099707, lng=-118.133486, popup=HereWasI)
+```
